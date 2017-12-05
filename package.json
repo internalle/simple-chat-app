@@ -1,0 +1,16 @@
+{
+  "name": "simple-chat",
+  "version": "1.0.0",
+  "description": "Simple chat built in Nodejs,SocketIO,NodeJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./main.js"
+  },
+  "author": "Slobodan Toncevski",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.2",
+    "socket.io": "^2.0.4",
+    "nodemon": "^1.12.1"
+  }
+}
