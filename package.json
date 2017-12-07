@@ -9,8 +9,10 @@
   "author": "Slobodan Toncevski",
   "license": "ISC",
   "dependencies": {
+    "emoji-mart-vue": "^1.0.3",
     "express": "^4.15.2",
+    "nodemon": "^1.12.1",
     "socket.io": "^2.0.4",
-    "nodemon": "^1.12.1"
+    "vue-cli": "^2.9.2"
   }
 }
