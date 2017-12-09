@@ -7,14 +7,14 @@ app.get('/', function(req, res){
 });
 
 
-io.on('connection', function(socket){
+io.on('connection', (socket) => {
   socket.on('chat message', function(msg){
     console.log('message: ' + msg);
 	io.emit('chat message', msg);
   });
   console.log('a user connected');
   socket.on('disconnect', function(){
-    console.log('user disconnected');
+    console.log('user disconnected be ajvan');
   });
 });
 
