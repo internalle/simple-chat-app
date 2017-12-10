@@ -28629,6 +28629,22 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
 
@@ -28673,34 +28689,70 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "chat-container" }, [
-    _c(
-      "ul",
-      { attrs: { id: "messages" } },
-      _vm._l(_vm.messages, function(message) {
-        return _c("li", [_vm._v(_vm._s(message))])
-      })
-    ),
-    _vm._v(" "),
-    _c(
-      "form",
-      {
-        attrs: { action: "" },
-        on: {
-          submit: function($event) {
-            $event.preventDefault()
-            _vm.sendMessage($event)
+  return _c(
+    "div",
+    {
+      staticClass: "col-sm-3 col-sm-offset-4 frame",
+      attrs: { id: "chat-container" }
+    },
+    [
+      _c(
+        "ul",
+        { attrs: { id: "messages" } },
+        _vm._l(_vm.messages, function(message) {
+          return _c("li", { staticStyle: { width: "100%" } }, [
+            _c("div", { staticClass: "msj macro" }, [
+              _vm._m(0, true, false),
+              _vm._v(" "),
+              _c("div", { staticClass: "text text-l" }, [
+                _c("p", [_vm._v(_vm._s(message))]),
+                _vm._v(" "),
+                _vm._m(1, true, false)
+              ])
+            ])
+          ])
+        })
+      ),
+      _vm._v(" "),
+      _c(
+        "form",
+        {
+          attrs: { action: "" },
+          on: {
+            submit: function($event) {
+              $event.preventDefault()
+              _vm.sendMessage($event)
+            }
           }
-        }
-      },
-      [
-        _c("input", { attrs: { id: "m", autocomplete: "off" } }),
-        _c("button", [_vm._v("Send")])
-      ]
-    )
-  ])
+        },
+        [
+          _c("input", { attrs: { id: "m", autocomplete: "off" } }),
+          _c("button", [_vm._v("Send")])
+        ]
+      )
+    ]
+  )
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "avatar" }, [
+      _c("img", {
+        staticClass: "img-circle",
+        staticStyle: { width: "100%" },
+        attrs: { src: "/src/test/" }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("p", [_c("small", [_vm._v("data")])])
+  }
+]
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {

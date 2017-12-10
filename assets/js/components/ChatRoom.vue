@@ -1,11 +1,26 @@
 <template>
-    <div class="chat-container">
+   <div id="chat-container" class="col-sm-3 col-sm-offset-4 frame">
         <ul id="messages">
-            <li  v-for="message in messages">{{message}}</li>
+            <li v-for="message in messages" style="width:100%">
+                <div class="msj macro">
+                <div class="avatar"><img class="img-circle" style="width:100%;" src="/src/test/" /></div>
+                <div class="text text-l">
+                    <p>{{message}}</p>
+                    <p><small>data</small></p>
+                    </div>
+                </div>
+            </li>
         </ul>
         <form action="" @submit.prevent="sendMessage">
-            <input id="m" autocomplete="off" /><button>Send</button>
+            <div>
+                <div class="msj-rta macro" style="margin:auto">
+                    <div class="text text-r" style="background:whitesmoke !important">
+                        <input class="mytext" placeholder="Type a message"/>
+                    </div>
+                </div>
+            </div>
         </form>
+
     </div>
 </template>
 
