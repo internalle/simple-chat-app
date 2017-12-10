@@ -15,6 +15,9 @@ window.Vue = require('vue');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
+import VueSocketio from 'vue-socket.io';
+
+Vue.use(VueSocketio, 'http://localhost:3000');
 Vue.component('chat-room', require('./components/ChatRoom.vue'));
 
 const app = new Vue({
