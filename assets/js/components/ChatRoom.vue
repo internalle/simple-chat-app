@@ -1,27 +1,42 @@
 <template>
-   <div id="chat-container" class="col-sm-3 col-sm-offset-4 frame">
-        <ul id="messages">
-            <li v-for="message in messages" style="width:100%">
-                <div class="msj macro">
-                <div class="avatar"><img class="img-circle" style="width:100%;" src="/src/test/" /></div>
-                <div class="text text-l">
-                    <p>{{message}}</p>
-                    <p><small>data</small></p>
-                    </div>
-                </div>
-            </li>
-        </ul>
-        <form action="" @submit.prevent="sendMessage">
-            <div>
-                <div class="msj-rta macro" style="margin:auto">
-                    <div class="text text-r" style="background:whitesmoke !important">
-                        <input class="mytext" placeholder="Type a message"/>
-                    </div>
-                </div>
-            </div>
-        </form>
+   <div id="chat-container">
+       <div class="chat_window">
+           <!-- TOP MENU -->
+           <div class="top_menu">
+               <div class="buttons">
+                   <div class="button close"></div>
+                   <div class="button minimize"></div>
+                   <div class="button maximize"></div>
+               </div>
+               <div class="title">Chat</div>
+           </div>
+           <!-- TOP MENU -->
 
-    </div>
+           <!-- MESSAGES -->
+           <ul class="messages"></ul>
+           <!-- MESSAGES -->
+
+           <!-- WRITE MESSAGE -->
+           <div class="bottom_wrapper clearfix">
+               <div class="message_input_wrapper">
+                   <input class="message_input" placeholder="Type your message here..." />
+               </div>
+               <div class="send_message">
+                   <div class="icon"></div>
+                   <div class="text">Send</div>
+               </div>
+           </div>
+           <!-- WRITE MESSAGE -->
+       </div>
+       <!--<div class="message_template">-->
+           <!--<li class="message">-->
+               <!--<div class="avatar"></div>-->
+               <!--<div class="text_wrapper">-->
+                   <!--<div class="text"></div>-->
+               <!--</div>-->
+           <!--</li>-->
+       <!--</div>-->
+   </div>
 </template>
 
 <script>
