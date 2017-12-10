@@ -1,10 +1,27 @@
-var app = require('express')();
+const express = require('express');
+const app = express();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
 
-app.get('/', function(req, res){
-  res.sendFile(__dirname + '/index.html');
+
+app.use(express.static('public'))
+// //set view engine
+ app.set('view engine', 'pug');
+//
+// //set view direcotyr
+// app.set('views','./views');
+
+// app.use(express.static('public'));
+// app.use(express.static('images'));
+
+
+app.get('/', function (req, res) {
+	res.render('index', { title: 'Hey', message: 'Hello there!' })
 });
+
+// app.get('/', function(req, res){
+//   res.sendFile(__dirname + '/index.html');
+// });
 
 
 io.on('connection', (socket) => {
